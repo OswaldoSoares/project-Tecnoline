@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
 from pathlib import Path
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,10 +84,10 @@ WSGI_APPLICATION = 'tecnoline.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'USER': 'root',
-        'PASSWORD': 'oswaldo',
-        'HOST': 'localhost',
-        # 'HOST': 'dbmy0056.whservidor.com',
+        'USER': 'tecnolinep',
+        'PASSWORD': 'S1c9c1p0',
+        # 'HOST': 'localhost',
+        'HOST': 'dbmy0056.whservidor.com',
         'PORT': '3306',
         'NAME': 'tecnolinep',
         'options': {
