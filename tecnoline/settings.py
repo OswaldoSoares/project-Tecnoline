@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 'rest_framework',
     'antigo',
-    'cliente'
+    'cliente',
+    'website',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,9 @@ ROOT_URLCONF = 'tecnoline.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,7 +84,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'USER': 'root',
         'PASSWORD': 'oswaldo',
-        'SERVER': 'localhost',
+        'HOST': 'localhost',
+        # 'HOST': 'dbmy0056.whservidor.com',
         'PORT': '3306',
         'NAME': 'tecnolinep',
         'options': {

@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from antigo import urls as antigo_urls
+from website import urls as index_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('servico/', include(antigo_urls))
+    path('', include(index_urls)),
+    path('servico/', include(antigo_urls)),
 ]
