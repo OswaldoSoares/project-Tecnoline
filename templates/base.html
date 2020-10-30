@@ -1,0 +1,55 @@
+<!doctype html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    {% load static %}
+    <div class="container">
+        <nav class="sidebar" align="center">
+            <header class="header_website">
+                <hgroup>
+                    <img src="{% static 'website/img/tecnoline_logo.jpg' %}" alt="tecnoline_logo" width="160px"
+                         class="logo"/>
+                    <h5>Controle Copiadora</h5>
+                </hgroup>
+            </header>
+            <ul>
+                <li><a href="{% url 'index_website' %}"><i class="fa fa-dashboard"></i>PAINEL GERAL</a></li>
+                <li><a href="{% url 'index_servico' %}"><i class="fa fa-address-card-o"></i>Ordem de Servico</a></li>
+            </ul>
+
+            <footer class="footer_website">
+                <button class="btn btn-sidebar btn-lg" onclick="window.location.href = '#';">
+                    <span class="glyphicon glyphicon-user"></span>
+                </button>
+                <h6>Oswaldo</h6>
+                <h6>TECNOLINE</h6>
+            </footer>
+        </nav>
+
+        <div class="conteudo">
+            <section>
+                {% block main %}
+                {% endblock %}
+            </section>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    {% block script %}
+    {% endblock %}
+
+</body>
+</html>
